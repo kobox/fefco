@@ -11,7 +11,7 @@ class FefcoCategory(models.Model):
     picture = models.ImageField('Kategoria FEFCO', default='fefco_pics/default.png', upload_to='fefco_pics/',
                                 blank=False, null=False)
     fefcocode = models.CharField(max_length=5)
-    parent_category = models.ForeignKey('self', blank=True, null=True)
+    parent_category = models.ForeignKey('self', blank=True, null=True, related_name="subcategories")
 
     def __unicode__(self):
         return self.title

@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.views import generic
+from .models import FefcoCategory
 
-# Create your views here.
+
+class DetailView(generic.DetailView):
+    model = FefcoCategory
+    template_name = 'detail.html'

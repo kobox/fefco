@@ -5,6 +5,6 @@ from .models import FefcoCategory
 
 @admin.register(FefcoCategory)
 class FefcoCategoryAdmin(admin.ModelAdmin):
-    list_display = ('__unicode__', 'slug', 'picture',)
+    list_display = ('__unicode__', 'fefcocode', 'slug', 'picture',)
 
     model = FefcoCategory
